@@ -1,0 +1,88 @@
+.modal-wrap
+    #modal-callback.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="20" height="20")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                picture.modal__picture
+                    img.modal__img(src="img/callback-modal-img.webp" srcset="img/callback-modal-img@2x.webp 2x" loading="lazy" width="420" height="180" alt="alt")
+
+                .modal__content
+                    h3.modal__title Маєте запитання?
+                    p.modal__descr Заповніть форму і ми звяжемося з вами
+                        
+                    form.form(id="callback-form" autocomplete="off" novalidate="novalidate")
+                        .form__group
+                            input#inputName.input.form__input.text-mask(type="text" name="inputName" placeholder="Ваше імя" autocomplete="off" required)
+
+                        .form__group.form__group--mb-32
+                            input#inputPhone.input.form__input.phone-mask(type="text" name="inputPhone" placeholder="+38 (___) __-__-___" autocomplete="off" required)
+
+                        .form__group.form__group--center.form__group--mb-20
+                            button.button.button--black.form__button Відправити
+
+                        .form__info Натискаючи на кнопку, ви погоджуєтеся з 
+                            br
+                            a.form__info-link(href="#") Політикою конфіденційності
+
+    #modal-success.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="20" height="20")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                picture.modal__picture
+                    img.modal__img(src="img/callback-modal-img.webp" srcset="img/callback-modal-img@2x.webp 2x" loading="lazy" width="420" height="180" alt="alt")
+
+                .modal__content
+                    h3.modal__title Ваші дані успішно 
+                        br
+                        | відправлені!
+
+    #modal-feedback.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="20" height="20")
+                        use(xlink:href="img/sprite.svg#close-modal")
+                
+                .modal__content
+                    h3.modal__title.modal__title--mb-32 Залиште відгук про товар
+                
+                    form.form(id="feedback-form" autocomplete="off" novalidate="novalidate")
+                        .form__group.form__group--flex
+                            label.form__label Ваша оцінка:
+                            fieldset.stars-rating
+                                input.stars-rating__input(type="radio" id="star5" name="stars-rating" value="5")
+                                label.stars-rating__label(for="star5" aria-label="5 star")
+                                    svg.stars-rating__icon(width="18" height="18")
+                                        use(xlink:href="img/sprite.svg#big-star")
+                                input.stars-rating__input(type="radio" id="star4" name="stars-rating" value="4")
+                                label.stars-rating__label(for="star4" aria-label="4 star")
+                                    svg.stars-rating__icon(width="18" height="18")
+                                        use(xlink:href="img/sprite.svg#big-star")
+                                input.stars-rating__input(type="radio" id="star3" name="stars-rating" value="3")
+                                label.stars-rating__label(for="star3" aria-label="3 star")
+                                    svg.stars-rating__icon(width="18" height="18")
+                                        use(xlink:href="img/sprite.svg#big-star")
+                                input.stars-rating__input(type="radio" id="star2" name="stars-rating" value="2")
+                                label.stars-rating__label(for="star2" aria-label="2 star")
+                                    svg.stars-rating__icon(width="18" height="18")
+                                        use(xlink:href="img/sprite.svg#big-star")
+                                input.stars-rating__input(type="radio" id="star1" name="stars-rating" value="1")
+                                label.stars-rating__label(for="star1" aria-label="1 star")
+                                    svg.stars-rating__icon(width="18" height="18")
+                                        use(xlink:href="img/sprite.svg#big-star")
+                                        
+                        .form__group
+                            input#inputFeedbackName.input.form__input.text-mask(type="text" name="inputName" placeholder="Ваше імя" autocomplete="off" required)
+
+                        .form__group.form__group--mb-32
+                            textarea#commentFeedback.textarea.form__input(type="text" name="commentFeedback" rows="5" placeholder="Ваш коментар" autocomplete="off" required)
+
+                        .form__buttons-group
+                            button.button.button--black.form__button Відправити
+                

@@ -1,0 +1,47 @@
+.why-card
+    border-width: 1px
+    border-style: solid
+    border-image: linear-gradient(90deg, #EFD56E 0%, #C79E35 100%) 1
+    background: #1a1a1a
+    padding: 30px
+    margin-top: 50px
+    flex: 1
+
+    @media ($max-md)
+        padding: 15px 5px
+        margin-top: 30px
+
+    &__pic
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: -80px auto 30px
+        width: 100px
+        height: 100px
+        background: linear-gradient(215deg, #EFD56E 30.83%, #FFF792 62.19%, #B88612 92.05%)
+        color: var(--black)
+        transform: skewX(-15deg)
+
+        @media ($max-md)
+            width: 60px
+            height: 60px
+            margin: -45px auto 15px
+
+    &__icon
+        transform: skewX(15deg)
+
+        @media ($max-md)
+            width: 40px
+            height: 40px
+
+    &__title
+        margin: 0
+        text-align: center
+        font-family: var(--font-title)
+        font-weight: 400
+        font-size: 21px
+        line-height: 1.2
+
+        @media ($max-md)
+            font-size: 16px
+

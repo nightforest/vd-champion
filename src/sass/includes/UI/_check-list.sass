@@ -1,0 +1,35 @@
+.check-list
+    margin: 0
+    padding: 0
+    list-style: none
+
+    &__item
+        position: relative
+        padding-left: 40px
+        font-size: 22px
+        font-weight: 400
+        line-height: 1.3
+
+        @media ($max-md)
+            font-size: 14px
+            padding-left: 30px
+
+        &:before
+            position: absolute
+            top: 0
+            left: 0
+            width: 28px
+            height: 28px
+            background: url("data:image/svg+xml,%3Csvg width='26' height='22' viewBox='0 0 26 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9786 21.8707C11.9043 21.8707 11.8308 21.8553 11.7628 21.8255C11.6948 21.7958 11.6336 21.7522 11.5832 21.6977L0.922354 10.1657C0.851286 10.0889 0.804173 9.99292 0.78678 9.88968C0.769387 9.78644 0.782468 9.68037 0.824424 9.58444C0.86638 9.48852 0.93539 9.40691 1.02301 9.3496C1.11063 9.29229 1.21305 9.26177 1.31775 9.26176H6.44928C6.52633 9.26178 6.60248 9.27831 6.67259 9.31026C6.7427 9.3422 6.80515 9.38881 6.85572 9.44694L10.4186 13.5459C10.8037 12.7228 11.5491 11.3523 12.8571 9.68236C14.7908 7.21351 18.3876 3.58261 24.5414 0.304887C24.6603 0.241549 24.7987 0.22511 24.9292 0.258817C25.0596 0.292524 25.1727 0.373926 25.2461 0.48695C25.3195 0.599973 25.3478 0.736402 25.3255 0.869298C25.3032 1.00219 25.2319 1.12189 25.1256 1.20476C25.1021 1.22313 22.7295 3.09159 19.9988 6.514C17.4857 9.66346 14.145 14.8133 12.5011 21.4617C12.4722 21.5785 12.4051 21.6823 12.3103 21.7564C12.2156 21.8306 12.0987 21.8709 11.9784 21.8709L11.9786 21.8707Z' fill='url(%23paint0_linear_62_96)' style=''/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_62_96' x1='5.65786' y1='-0.600999' x2='-4.45202' y2='15.6932' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23EBD67D' style='stop-color:%23EBD67D;stop-color:color(display-p3 0.9216 0.8392 0.4902);stop-opacity:1;'/%3E%3Cstop offset='0.512262' stop-color='%23FEF79F' style='stop-color:%23FEF79F;stop-color:color(display-p3 0.9961 0.9686 0.6235);stop-opacity:1;'/%3E%3Cstop offset='1' stop-color='%23B08831' style='stop-color:%23B08831;stop-color:color(display-p3 0.6902 0.5333 0.1922);stop-opacity:1;'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat center center
+            content: ""
+
+            @media ($max-md)
+                width: 19px
+                height: 19px
+                background-size: 19px
+
+        &:not(:last-child)
+            margin-bottom: 8px
+
+            @media ($max-md)
+                margin-bottom: 18px

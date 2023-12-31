@@ -1,0 +1,58 @@
+section.form-section
+    picture.form-section__bg
+        source(srcset="img/banner-bg-mobile@2x.webp 2x, img/banner-bg-mobile.webp" width="320" height="494" media="(max-width: 575.98px)")
+        img.form-section__bg-img(src="img/banner-bg.webp" srcset="img/banner-bg@2x.webp 2x" loading="lazy" width="1920" height="1308" alt="alt")
+
+    picture.form-section__bg-right
+        img.form-section__bg-right-img(src="img/paper-bg-right-2.webp" srcset="img/paper-bg-right-2@2x.webp 2x" loading="lazy" width="423" height="511" alt="alt")
+
+    .container.form-section__container
+        h1.page-title.form-section__title Обрана програма
+            span.br Жим лежачі
+
+        form.form.form-section__form(id="contacts-form" autocomplete="off" novalidate="novalidate")
+            .form__row
+                .form__col
+                    input#inputName.input.form__input(type="text" name="inputName" placeholder="Ім’я *" autocomplete="off" required)
+                
+                .form__col
+                    input#inputPhone.input.form__input.phone-mask(type="text" name="inputPhone" placeholder="Телефон *" autocomplete="off" required)
+                
+                .form__col
+                    input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="Email *" autocomplete="off" required)
+
+            .form__group
+                textarea#comment.textarea.form__input(name="comment" rows="4" placeholder="Коментар *" autocomplete="off" required)
+
+            label.form__label Спосіб оплати
+            
+            .form__row
+                .form__col
+                    .radio
+                        input.radio__input#radio-1(type="radio" name="paymentType" value="true" checked)
+                        label.radio__label(for="radio-1")
+                            svg.radio__icon(width="90" height="24")
+                                use(xlink:href="img/sprite.svg#paypal-2")
+                
+                .form__col
+                    .radio
+                        input.radio__input#radio-2(type="radio" name="paymentType" value="true")
+                        label.radio__label(for="radio-2") Дебітова картка
+                
+                .form__col
+                    .radio
+                        input.radio__input#radio-3(type="radio" name="paymentType" value="true")
+                        label.radio__label(for="radio-3")
+                            svg.radio__icon(width="70" height="29")
+                                use(xlink:href="img/sprite.svg#apple-pay-2")
+
+            .form__group
+                .checkbox
+                    input.checkbox__input#checkboxAgree(type="checkbox" name="checkbox" value="true" required)
+                    label.checkbox__label(for="checkboxAgree") Заповнивши форму ви дали згоду з умовами 
+                        a.gold-link(href="#") Договіру оферти
+                        |  тa 
+                        a.gold-link(href="#") Політикою конфіденційності
+
+            .form__button-group
+                button.button.form__button Cплатити

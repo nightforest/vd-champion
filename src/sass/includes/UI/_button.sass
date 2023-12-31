@@ -1,0 +1,66 @@
+.button
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: 8px
+    text-align: center
+    width: auto
+    height: 70px
+    margin: 0
+    border: none
+    padding: 5px 45px
+    box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+    outline: none
+    cursor: pointer
+    user-select: none
+    vertical-align: middle
+    appearance: none
+    text-decoration: none
+    text-transform: none
+    font-weight: 800
+    font-size: 18px
+    line-height: 1.2
+    letter-spacing: 0
+    border-radius: 0
+    text-transform: uppercase
+    background: linear-gradient(215deg, #EFD56E 30.83%, #FFF792 62.19%, #B88612 92.05%)
+    background-size: 200%
+    color: var(--black)
+    box-shadow: none
+    transition: all .5s ease
+    overflow: hidden
+    z-index: $z-index-1
+    transform: skewX(-17deg)
+
+    @media ($max-md)
+        height: 40px
+        font-size: 14px
+
+    span
+        transform: skewX(17deg)
+
+    &:hover,
+    &:active,
+    &:focus-visible
+        outline: none
+        color: var(--black)
+        background-position: right
+
+    &:disabled
+        background: var(--grey-light) !important
+        border-color: var(--grey-light) !important
+        color: var(--grey) !important
+        cursor: not-allowed
+
+    &--outline
+        border: 2px solid var(--white)
+        background: none
+        color: var(--white)
+        
+        &:hover,
+        &:active,
+        &:focus-visible
+            background: var(--white)
+            color: var(--black)

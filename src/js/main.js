@@ -1,0 +1,31 @@
+import animation from './includes/animation.js';
+import fixHeight from './includes/fixHeight.js';
+import mobileNav from './includes/mobileNav.js';
+import scrollToId from './includes/scrollToId.js';
+import isDropdown from './includes/isDropdown.js';
+import programsSlider from './includes/programsSlider.js';
+import contactsFormValidation from './includes/contactsFormValidation.js';
+import imask from './includes/imask.js';
+import upButtonVisible from './includes/upButtonVisible.js';
+import initTabs from './includes/initTabs.js';
+import feedbackSlider from './includes/feedbackSlider.js';
+import photoSwipe from './includes/photoSwipe.js';
+import founderSlider from './includes/founderSlider.js';
+import newAccordion from './includes/newAccordion.js';
+import '../sass/main.sass';
+
+
+isDropdown();
+fixHeight();
+animation();
+mobileNav();
+scrollToId();
+contactsFormValidation();
+imask();
+upButtonVisible();
+programsSlider();
+initTabs();
+feedbackSlider();
+photoSwipe();
+founderSlider();
+newAccordion();

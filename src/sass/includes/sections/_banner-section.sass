@@ -1,0 +1,164 @@
+.banner-section
+    position: relative
+    min-height: 1100px
+    width: 100%
+    display: flex
+    align-items: center
+    
+    @media (max-width: 1600px)
+        min-height: 900px
+
+    @media (max-width: 1400px)
+        min-height: 800px
+
+    @media ($max-xl)
+        min-height: 620px
+
+    @media ($max-lg)
+        min-height: 0
+        padding: 110px 0 35px
+
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        z-index: $z-index-minus
+
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__picture
+        position: absolute
+        bottom: 0
+        right: 0
+        max-width: 50%
+
+        @media ($max-md)
+            bottom: -50px
+            max-width: 100%
+
+        &-img
+            max-width: 100%
+            height: auto
+    
+    &__bg-left
+        position: absolute
+        bottom: -100px
+        left: 0
+        display: inline-flex
+
+        @media ($max-xl)
+            display: none
+
+        &-img
+            max-width: 100%
+            height: auto
+
+    &__content
+
+        @media ($max-xl)
+            max-width: 50%
+
+        @media ($max-lg)
+            max-width: 100%
+        
+        &--small
+            max-width: 515px
+
+            @media ($max-xl)
+                max-width: 515px
+
+            @media ($max-lg)
+                max-width: 515px
+
+    &__title
+        position: relative
+        max-width: 655px
+        font-size: 50px
+        font-weight: 400
+        font-family: var(--font-title)
+        line-height: 1.16
+        margin: 0 0 25px
+        padding-bottom: 20px
+
+        @media ($max-xl)
+            font-size: 32px
+            max-width: 480px
+
+        @media ($max-md)
+            font-size: 20px
+            max-width: 300px
+            z-index: $z-index-minus
+
+        &:before
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 1px
+            background: radial-gradient(circle, #C79E35 50%, #EFD56E 70%, transparent 100%)
+            content: ""
+
+    &__descr
+        font-size: 22px
+        margin-bottom: 55px
+
+        @media ($max-md)
+            font-size: 14px
+            max-width: 180px
+
+        p
+            margin: 0 0 1.7rem
+
+            &:last-child
+                margin: 0
+
+    &__check-list
+        margin-bottom: 40px
+
+        @media ($max-xs)
+            max-width: 155px
+
+    &__buttons
+        display: flex
+        gap: 30px
+
+        @media ($max-md)
+            flex-direction: column
+            gap: 15px
+
+    &__button
+        max-width: 290px
+        width: 100%
+        padding: 5px 15px
+
+        @media ($max-sm)
+            max-width: 100%
+
+        &.button--outline
+
+            @media ($max-md)
+                background: rgba(0, 0, 0, .8)
+
+                &:hover,
+                &:active,
+                &:focus-visible
+                    background: var(--white)
+                    color: var(--black)
+    
+    &__social
+        position: absolute
+        top: 50%
+        right: 30px
+        transform: translateY(-50%)
+
+        @media ($max-lg)
+            display: none
+
+        .social__list
+            flex-direction: column

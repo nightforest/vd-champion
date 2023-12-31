@@ -1,0 +1,51 @@
+.feedback-slider
+    padding-bottom: 50px
+
+    &-wrap
+        position: relative
+
+    &__prev,
+    &__next
+        position: absolute
+        top: calc(50% - 50px)
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 50px
+        height: 50px
+        background: var(--black)
+        padding: 5px
+        z-index: $z-index-1
+        transition: all .5s ease
+
+        @media ($max-lg)
+            display: none
+
+        &.swiper-button-disabled
+            opacity: 0
+            visibility: hidden
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            background: #555
+    
+    &__prev
+        left: -100px
+        transform: skewX(-15deg)
+
+        @media (max-width: 1400px)
+            left: 0px
+
+        &-icon
+            transform: skewX(15deg)
+
+    &__next
+        right: -100px
+        transform: skewX(15deg)
+
+        @media (max-width: 1400px)
+            right: 0px
+
+        &-icon
+            transform: skewX(-15deg)

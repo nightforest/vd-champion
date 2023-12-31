@@ -1,0 +1,42 @@
+section.banner-section
+    picture.banner-section__bg
+        source(srcset="img/banner-bg-mobile@2x.webp 2x, img/banner-bg-mobile.webp" width="320" height="494" media="(max-width: 575.98px)")
+        img.banner-section__bg-img(src="img/banner-bg.webp" srcset="img/banner-bg@2x.webp 2x" loading="lazy" width="1920" height="1308" alt="alt")
+
+    picture.banner-section__picture
+        source(srcset="img/banner-img-mobile@2x.webp 2x, img/banner-img-mobile.webp" width="231" height="439" media="(max-width: 991.98px)")
+        img.banner-section__picture-img(src="img/banner-img.webp" srcset="img/banner-img@2x.webp 2x" loading="lazy" width="883" height="989" alt="alt")
+
+    picture.banner-section__bg-left
+        img.banner-section__bg-left-img(src="img/banner-left-img.webp" srcset="img/banner-left-img@2x.webp 2x" loading="lazy" width="412" height="511" alt="alt")
+
+    .container.banner-section__container
+        .banner-section__content.banner-section__content--small
+            h1.banner-section__title.animation-down Ваш платіж 
+                span.gold-color.br успішно прийнято
+
+            .banner-section__descr.animation-down(data-delay="0.2")
+                p Найближчим часом з Вами зв'яжеться Вадим Довганюк для надання доступу.
+                p 
+                    strong Дякуємо, ви зробили правильний вибір!
+
+            .banner-section__buttons.animation-down(data-delay="0.4")
+                a.button.banner-section__button(href="#")
+                    span Hа головну
+
+    address.social.banner-section__social
+        ul.social__list
+            li.social__item
+                a.social__link(href="#" aria-label="Telegram")
+                    svg.social__icon(width="19" height="17")
+                        use(xlink:href="img/sprite.svg#telegram")
+
+            li.social__item
+                a.social__link(href="#" aria-label="Facebook")
+                    svg.social__icon(width="12" height="23")
+                        use(xlink:href="img/sprite.svg#facebook")
+
+            li.social__item
+                a.social__link(href="#" aria-label="Instagram")
+                    svg.social__icon(width="20" height="20")
+                        use(xlink:href="img/sprite.svg#instagram")

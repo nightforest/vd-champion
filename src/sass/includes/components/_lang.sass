@@ -1,0 +1,79 @@
+.lang
+    position: relative
+    border-left: 1px solid #343434
+    border-right: 1px solid #343434
+    padding: 35px
+
+    @media ($max-xl)
+        padding: 35px 15px
+
+    @media ($max-lg)
+        padding: 15px
+
+    &.is-active
+
+        .lang__list
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+
+        .lang__toggle-icon
+            transform: rotateX(180deg)
+
+    &__toggle
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 10px
+        font-size: 16px
+        font-weight: 400
+        line-height: 1.5
+        text-transform: uppercase
+        color: var(--white)
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--gold)
+        
+        &-icon
+            transition: transform .5s ease
+
+    &__list
+        position: absolute
+        top: calc(100% + 1px)
+        left: 0
+        width: 100%
+        background: rgba(0, 0, 0, .7)
+        border: 1px solid #343434
+        border-top: none
+        margin: 0
+        padding: 15px 35px
+        list-style: none
+        opacity: 0
+        visibility: hidden
+        transform: translateY(10px)
+        transition: all .25s ease
+
+        @media ($max-xl)
+            padding: 15px
+    
+    &__item
+
+        &:not(:last-child)
+            margin-bottom: 10px
+    
+    &__link
+        font-size: 16px
+        font-weight: 400
+        text-transform: uppercase
+        color: var(--white)
+        line-height: 1.5
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--gold)
+

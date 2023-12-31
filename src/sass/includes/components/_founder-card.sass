@@ -1,0 +1,43 @@
+.founder-card
+    position: relative
+    padding-left: 40px
+    max-width: 445px
+    width: 100%
+
+    @media ($max-md)
+        font-size: 14px
+
+    @media ($max-xl)
+        max-width: 345px
+
+    @media ($max-md)
+        max-width: 100%
+
+    &:not(:last-child)
+        margin-bottom: 60px
+
+    &:before
+        position: absolute
+        top: -15px
+        left: 5px
+        width: 4px
+        height: 60px
+        background: radial-gradient(circle, #EFD56E 30%, #EFD56E 50%, #C79E35 100%)
+        content: ''
+        transform: skewX(-15deg)
+
+    p
+
+        &:last-child
+            margin-bottom: 0
+
+    &--right
+        text-align: right
+        margin-left: auto
+        padding-right: 40px
+        padding-left: 0
+
+        &:before
+            left: auto
+            right: 5px
+            transform: skewX(15deg)
