@@ -29,7 +29,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-      <script type="module" crossorigin src="/assets/main-ec80b4c9.js"></script>
+      <script type="module" crossorigin src="/assets/main-44c05a2c.js"></script>
       <link rel="stylesheet" href="/assets/main-8101e34c.css">
     </head>
     <body>
@@ -88,17 +88,17 @@
     <form class="form form-section__form" id="contacts-form" autocomplete="off" novalidate="novalidate">
       <div class="form__row">
         <div class="form__col">
-          <input class="input form__input" id="inputName" type="text" name="inputName" placeholder="Ім’я *" autocomplete="off" required="required"/>
+          <input class="input form__input" id="inputName" type="text" name="inputName" placeholder="Ім’я *" data-error-message="Будь ласка, заповніть це поле" autocomplete="off" required="required"/>
         </div>
         <div class="form__col">
-          <input class="input form__input phone-mask" id="inputPhone" type="text" name="inputPhone" placeholder="Телефон *" autocomplete="off" required="required"/>
+          <input class="input form__input phone-mask" id="inputPhone" type="text" name="inputPhone" placeholder="Телефон *" data-error-message="Будь ласка, введіть телефон" autocomplete="off" required="required"/>
         </div>
         <div class="form__col">
-          <input class="input form__input" id="inputEmail" type="email" name="inputEmail" placeholder="Email *" autocomplete="off" required="required"/>
+          <input class="input form__input" id="inputEmail" type="email" name="inputEmail" placeholder="Email *" data-error-message="Будь ласка, введіть email" autocomplete="off" required="required"/>
         </div>
       </div>
       <div class="form__group">
-        <textarea class="textarea form__input" id="comment" name="comment" rows="4" placeholder="Коментар *" autocomplete="off" required="required"></textarea>
+        <textarea class="textarea form__input" id="comment" name="comment" rows="4" placeholder="Коментар *" autocomplete="off"></textarea>
       </div>
       <label class="form__label">Спосіб оплати</label>
       <div class="form__row">

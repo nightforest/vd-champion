@@ -13,16 +13,16 @@ section.form-section
         form.form.form-section__form(id="contacts-form" autocomplete="off" novalidate="novalidate")
             .form__row
                 .form__col
-                    input#inputName.input.form__input(type="text" name="inputName" placeholder="Ім’я *" autocomplete="off" required)
+                    input#inputName.input.form__input(type="text" name="inputName" placeholder="Ім’я *" data-error-message="Будь ласка, заповніть це поле" autocomplete="off" required)
                 
                 .form__col
-                    input#inputPhone.input.form__input.phone-mask(type="text" name="inputPhone" placeholder="Телефон *" autocomplete="off" required)
+                    input#inputPhone.input.form__input.phone-mask(type="text" name="inputPhone" placeholder="Телефон *" data-error-message="Будь ласка, введіть телефон" autocomplete="off" required)
                 
                 .form__col
-                    input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="Email *" autocomplete="off" required)
+                    input#inputEmail.input.form__input(type="email" name="inputEmail" placeholder="Email *" data-error-message="Будь ласка, введіть email" autocomplete="off" required)
 
             .form__group
-                textarea#comment.textarea.form__input(name="comment" rows="4" placeholder="Коментар *" autocomplete="off" required)
+                textarea#comment.textarea.form__input(name="comment" rows="4" placeholder="Коментар *" autocomplete="off")
 
             label.form__label Спосіб оплати
             

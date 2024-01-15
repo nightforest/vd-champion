@@ -10,7 +10,7 @@ const contactsFormValidation = () => {
             validator.addField('#inputName', [
                 {
                     rule: 'required',
-                    errorMessage: "Будь ласка, заповніть це поле",
+                    errorMessage: document.getElementById('inputName').getAttribute('data-error-message'),
                 },
             ]);
         
@@ -18,7 +18,7 @@ const contactsFormValidation = () => {
             validator.addField('#inputPhone', [
                 {
                     rule: 'required',
-                    errorMessage: "Будь ласка, заповніть це поле",
+                    errorMessage: document.getElementById('inputPhone').getAttribute('data-error-message'),
                 },
             ]);
         
@@ -26,15 +26,7 @@ const contactsFormValidation = () => {
             validator.addField('#inputEmail', [
                 {
                     rule: 'required',
-                    errorMessage: "Будь ласка, заповніть це поле",
-                },
-            ]);
-
-        document.getElementById('comment') &&
-            validator.addField('#comment', [
-                {
-                    rule: 'required',
-                    errorMessage: "Будь ласка, заповніть це поле",
+                    errorMessage: document.getElementById('inputEmail').getAttribute('data-error-message'),
                 },
             ]);
 
@@ -42,7 +34,6 @@ const contactsFormValidation = () => {
             validator.addField('#checkboxAgree', [
                 {
                     rule: 'required',
-                    errorMessage: "Будь ласка, заповніть це поле",
                 },
             ]);
     }
